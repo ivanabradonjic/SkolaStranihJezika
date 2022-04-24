@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ClanoviKursa" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="95b7ea5c-7954-49d1-acd1-3710719305f0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="vrstaKursa" class="java.lang.String"/>
+	<parameter name="jezikKursa" class="java.lang.String"/>
+	<parameter name="grupa" class="java.lang.String"/>
+	<parameter name="fond" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="osoba.ime" class="java.lang.String"/>
+	<field name="osoba.prezime" class="java.lang.String"/>
+	<field name="datumUpisa" class="java.util.Date"/>
+	<field name="kategorija.naziv" class="java.lang.String"/>
+	<field name="osoba.email" class="java.lang.String"/>
+	<field name="nivo.oznaka" class="java.lang.String"/>
+	<variable name="brClanova" class="java.lang.Long" calculation="Count">
+		<variableExpression><![CDATA[$F{osoba.email}]]></variableExpression>
+	</variable>
+	<group name="nivoG">
+		<groupExpression><![CDATA[$F{nivo.oznaka}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+	</group>
+	<group name="grupaG">
+		<groupHeader>
+			<band height="56">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="80" height="30" backcolor="#C6CF8C" uuid="c768956a-0f40-40cd-af15-49ed89153c97">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6e4b8dfa-c934-486d-a8de-dde49198138e"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Ime]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="30" width="480" height="25" backcolor="#EDEDC7" uuid="03ee14ee-64f5-4a2f-979c-3868f3fcf974"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement mode="Opaque" x="80" y="0" width="100" height="30" backcolor="#C6CF8C" uuid="ead396e3-ea8a-4a4a-aa44-a879b59fe937">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdbd3832-6bd2-46f0-a937-37379d0378a3"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Prezime]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="180" y="0" width="100" height="30" backcolor="#C6CF8C" uuid="d8070dec-f539-41a2-8327-5ffdda2069ae">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6feccc3-5147-4f6a-9c82-f2785f23e4d8"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Datum upisa]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="280" y="0" width="100" height="30" backcolor="#C6CF8C" uuid="80903cd0-6281-4662-a176-66da6ee28716">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53dfbf48-a348-4056-817e-c417672c7d14"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Kategorija]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="380" y="0" width="100" height="30" backcolor="#C6CF8C" uuid="c63ea755-2d18-4247-8a7c-98d8dd23cbbe">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="283714d1-eee7-4ff3-a50d-cb39fa5ae94d"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Email]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="180" y="31" width="100" height="22" uuid="0dea0e37-2264-44c7-885d-3d2eb79fee38"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nivo.oznaka}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="20" width="270" height="30" forecolor="#254210" uuid="154eb7a4-b684-4e29-a725-1bae92da1769"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="18"/>
+				</textElement>
+				<text><![CDATA[Podaci o clanovima kursa]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="98" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="90" y="0" width="100" height="30" backcolor="#F2EDC9" uuid="740f2fee-2c5e-478b-85c7-1a7fe9ccd18c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vrstaKursa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="90" height="30" backcolor="#E3D6A6" uuid="9f952117-8923-46b7-9082-384913278492"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Vrsta kursa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="90" height="30" backcolor="#E3D6A6" uuid="ec832960-6e63-442f-b5f0-6fe721ffd377"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Jezik]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="90" y="30" width="100" height="30" backcolor="#F2EDC9" uuid="3bb21075-aa5a-445c-9232-d4b610a3ac44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{jezikKursa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="370" y="0" width="100" height="30" backcolor="#F2EDC9" uuid="63a30b17-1538-42f3-abd5-089c9faf086a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{grupa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="370" y="30" width="100" height="30" backcolor="#F2EDC9" uuid="59d02c32-a0bd-4026-a0fd-0d7a205a844c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fond}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="90" height="30" backcolor="#E3D6A6" uuid="3b2fac36-b289-4961-af79-0350f0354880"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Grupa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="30" width="90" height="30" backcolor="#E3D6A6" uuid="08fe8b45-136a-489d-a413-0d6209833b6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Fond]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="30" backcolor="#DBE6B3" uuid="26de6cb8-3c9c-4097-920d-b0441cbf7740">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6e4b8dfa-c934-486d-a8de-dde49198138e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{osoba.ime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="80" y="0" width="100" height="30" backcolor="#DBE6B3" uuid="5c2706d7-caae-4ace-a487-5462be6c7606">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdbd3832-6bd2-46f0-a937-37379d0378a3"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{osoba.prezime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="180" y="0" width="100" height="30" backcolor="#DBE6B3" uuid="f5ae29e5-6011-472b-ae72-4cc12bcb468a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f6feccc3-5147-4f6a-9c82-f2785f23e4d8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{datumUpisa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="280" y="0" width="100" height="30" backcolor="#DBE6B3" uuid="1766b2ad-1027-45aa-9b6a-a1dee381272a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="53dfbf48-a348-4056-817e-c417672c7d14"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kategorija.naziv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="380" y="0" width="100" height="30" backcolor="#DBE6B3" uuid="d5e164b0-a6a3-4ab1-95bb-67be6eae6892">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="283714d1-eee7-4ff3-a50d-cb39fa5ae94d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{osoba.email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="30" width="100" height="30" uuid="3c24345e-dca3-4bf1-9ea8-4c51ee9a7645"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="2" width="100" height="30" uuid="546e49d1-0fbb-4ec8-b5c6-3852acbf0aad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{brClanova}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="2" width="120" height="30" uuid="c6387dc6-436f-4146-8cc5-e2b9154ecbdc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Ukupan broj clanova:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

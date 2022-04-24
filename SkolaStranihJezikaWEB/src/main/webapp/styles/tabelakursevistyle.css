@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+.jezik{
+margin-top:240px;
+margin-left:40%;
+position:relative;
+display:block;
+height:70px;
+z-index:0;
+
+}
+.selectjezik {
+  margin-top:0;
+  display:inline-block;
+  
+}
+
+.selectjezik select {
+  background-color: #38444d;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em; 
+  border: 0;
+  margin: 0;
+  width:160px;
+  height:35px;
+  border-radius: 5px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.selectjezik::before,
+.selectjezik::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectjezik::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.selectjezik::before { /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.selectjezik select[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.selectjezik select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.selectjezik::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.selectjezik::after {
+  color: rgba(0,0,0,.4);
+}
+
+.btnjezik{
+background-color:#38444d;
+  margin-top:0;
+  margin-left:1px;
+  color: white;
+  padding: 8px 14px;
+  text-align:center;
+  font-size:14px;
+  border:none;
+  border-radius:5px;
+  cursor: pointer;
+  width: 80px;
+  height:37px;
+  z-index:0;
+}
+.tabelakursevi{
+margin-top:10px;
+margin-left:25%;
+display:block;
+z-index:0;
+
+} 
+#kursevi table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#kursevi th, #kursevi td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+#kursevi th {
+background-color: #BDB76B;
+}
+
+#kursevi tr:hover {background-color: #BDB76B;}
+
+#kursevi a:link{
+	text-decoration:none;
+}
+
