@@ -1,2 +1,2 @@
 # SkolaStranihJezika
-Informacioni sistem skola stranih jezika realizovan pomoću spring boot-a
+Informacioni sistem skole stranih jezika realizovan pomoću spring boot-a
