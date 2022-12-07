@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aktuelni kursevi</title>
+<title>Aktuelna ponuda</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles/style.css">
 <style>
 
@@ -87,7 +87,7 @@ color:white;
 
 			<security:authorize access="hasRole('CLAN')">
 				<li><a href="/Kursevi/clanKontroler/sviJezici">Cenovnik</a></li>
-				<li><a href="/Kursevi/clanKontroler/prikaziAktuelneKurseve">Aktuelni kursevi</a></li>
+				<li><a href="/Kursevi/clanKontroler/prikaziAktuelneKurseve">Aktuelna ponuda</a></li>
 			</security:authorize>
 			<li><a href="/Kursevi/auth/logout">Odjava</a></li>
 		</ul>
@@ -133,7 +133,11 @@ color:white;
 		<h4>${poruka2 }</h4>
 	</c:if>
 	<c:if test="${!empty poruka3}">
-		<h4>${poruka3 }</h4>
+		<script>
+				function myFunction1(){
+ 				 alert("Zao nam je, prijava je istekla.");
+				}
+			</script>
 	</c:if>
 	
 </div>
@@ -147,6 +151,7 @@ color:white;
 			</script>
 		</c:if> 
 
+<script type="text/javascript">window.onload=myFunction1;</script>
 <script type="text/javascript">window.onload=myFunction2;</script>
 
 </body>

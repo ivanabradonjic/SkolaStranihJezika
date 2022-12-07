@@ -121,7 +121,7 @@ background-color:#656036;
 
 			<security:authorize access="hasRole('CLAN')">
 				<li><a href="/Kursevi/clanKontroler/sviJezici">Cenovnik</a></li>
-				<li><a href="/Kursevi/clanKontroler/prikaziAktuelneKurseve">Aktuelni kursevi</a></li>
+				<li><a href="/Kursevi/clanKontroler/prikaziAktuelneKurseve">Aktuelna ponuda</a></li>
 			</security:authorize>
 			<li><a href="/Kursevi/auth/logout">Odjava</a></li>
 		</ul>
